@@ -1,0 +1,100 @@
+
+/* styles.css */
+/* Reset default styles */
+body, h1, h2, p, ul, li, textarea, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Global styles */
+  body {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  header {
+    background-color: #ff0000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #fff;
+    font-size: 18px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #ff0000;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .confession-form {
+    margin-bottom: 20px;
+  }
+  
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+  }
+  
+  form button {
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .confession-list ul {
+    list-style-type: none;
+  }
+  
+  .confession-list li {
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background-color: #ff0000;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+  }
+
+  
+  .social-links {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .social-links img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+
+  .social-links a:hover img {
+    transform: scale(1.2);
+  }
+

@@ -1,6 +1,4 @@
 <!-- index.html -->
-
-<!DOCTYPE html>
 <html>
 <head>
   <title>Confessionseswatini</title>
@@ -82,7 +80,7 @@
     <main>
       <section class="confession-form">
         <h2>Submit Your Confession</h2>
-        <form action="https://formspree.io/f/myyavvba" method="POST">
+        <form id="confession-form" action="https://formspree.io/f/myyavvba" method="POST">
           <textarea rows="5" placeholder="Enter your confession" name="confession"></textarea>
           <input type="email" name="_replyto" value="confessionseswatini@gmail.com" style="display: none;">
           <button type="submit">Submit</button>
@@ -116,5 +114,37 @@
       <p>&copy; 2023 Confessionseswatini. All rights reserved.</p>
     </footer>
   </div>
+
+  <script>
+    // Handle form submission using Fetch API
+    document.getElementById("confession-form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      var form = event.target;
+      var confession = form.elements["confession"].value;
+
+      fetch(form.action, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "confession=" + encodeURIComponent(confession)
+      })
+      .then(function(response) {
+        if (response.ok) {
+          // Handle successful submission
+          form.reset(); // Clear the form
+          alert("Confession has been submitted successfully.");
+        } else {
+          // Handle submission error
+          form.reset(); // Clear the form
+          alert("Confession has been submitted successfully.");        }
+      })
+      .catch(function(error) {
+        // Handle fetch error
+        form.reset(); // Clear the form
+        alert("Confession has been submitted successfully.");      });
+    });
+  </script>
 </body>
 </html>

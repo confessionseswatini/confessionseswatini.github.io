@@ -14,8 +14,16 @@
       padding: 20px;
     }
 
-    header p {
-      font-size: 20px;
+      /* Default header font size */
+    header h1 {
+      font-size: 48px;
+    }
+
+    /* Decrease header font size for smaller screens */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 36px;
+      }
     }
 
     .confession-form {

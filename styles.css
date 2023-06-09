@@ -110,7 +110,12 @@ form button:hover {
   object-fit: cover;
   border-radius: 50%;
 }
-
+@media (max-width: 600px) {
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+}
 .social-links {
   text-align: center;
   margin-top: 20px;

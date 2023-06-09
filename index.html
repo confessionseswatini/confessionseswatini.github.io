@@ -81,6 +81,23 @@
       color: #fff;
       font-size: 14px;
     }
+    form textarea[name="location"] {
+    height: 80px; /* Adjust the height as per your preference */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    resize: none;
+    border-radius: 15px;
+  }
+  form textarea[name="confession"] {
+    resize: none;
+    border-radius: 15px;
+
+  }
+  form button[type="submit"]{
+    margin-top: 10px;
+    border-radius: 15px;
+
+  }
   </style>
 </head>
 <body>
@@ -95,6 +112,7 @@
         <h2>Submit Your Confession</h2>
         <form id="confession-form" action="https://formspree.io/f/myyavvba" method="POST">
           <textarea rows="5" placeholder="Enter your confession" name="confession"></textarea>
+          <textarea rows="3" placeholder="location" name="location"></textarea>
           <input type="email" name="_replyto" value="confessionseswatini@gmail.com" style="display: none;">
           <button type="submit">Submit</button>
        </form>
@@ -153,13 +171,14 @@
 
       var form = event.target;
       var confession = form.elements["confession"].value;
+      var location = form.elements["location"].value;
 
       fetch(form.action, {
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
-        body: "confession=" + encodeURIComponent(confession)
+        body: "confession=" + encodeURIComponent(confession)+ "&location="+ encodeURIComponent(location)
       })
       .then(function(response) {
         if (response.ok) {

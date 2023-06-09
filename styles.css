@@ -104,16 +104,16 @@ form button:hover {
   margin-bottom: 20px;
 }
 
+
 .logo {
-  width: 100px;
-  height: 100px;
+  max-width: 100px;
+  height: auto;
   object-fit: cover;
   border-radius: 50%;
 }
 @media (max-width: 600px) {
   .logo {
-    width: 20px;
-    height: 20px;
+    max-width: 70px;
   }
 }
 .social-links {

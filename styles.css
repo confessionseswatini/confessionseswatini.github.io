@@ -20,7 +20,7 @@ body {
 }
 
 header {
-  background-color: #ff4d4d;
+  background-color: #ff1a1a;
   padding: 20px;
   text-align: center;
 }
@@ -43,7 +43,7 @@ main {
 }
 
 h2 {
-  color: #ff4d4d;
+  color: #ff1a1a;
   font-size: 32px;
   margin-bottom: 10px;
 }
@@ -95,6 +95,20 @@ form button:hover {
   font-family: Arial, sans-serif;
   font-size: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .social-links {
